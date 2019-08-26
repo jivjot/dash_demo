@@ -16,7 +16,7 @@ plotly_image = html.Img(src=app.get_asset_url("dash-logo.png"),
 
 header_middle = html.Div(
                     [
-                        html.H3("",style={"margin-bottom": "0px"},),
+                        html.H3("Middle",style={"margin-bottom": "0px"},),
                         ],
                     id="title",
                     className="one-half column"
