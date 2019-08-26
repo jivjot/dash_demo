@@ -20,4 +20,16 @@ data = data[(data.InvoiceDate >= '2011-01-01') & (data.InvoiceDate <= '2011-06-3
 
 start_date = data.InvoiceDate.min()
 end_date = data.InvoiceDate.max()
+max_qty = data.Quantity.max()
 
+min_price = data.UnitPrice.min()
+max_price = data.UnitPrice.max()
+
+all_countries = ['All'] + sorted(data.Country.drop_duplicates().tolist())
+
+
+products = data.groupby(by=['StockCode'],as_index=False).agg({'InvoiceNo':'count'})
+products.columns = ['StockCode','Count']
+products = products[products.Count > 100]
+products = sorted(products.StockCode.drop_duplicates().tolist())
+product_default = products[0]
