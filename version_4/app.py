@@ -4,6 +4,8 @@ import dash_core_components as dcc
 from controls import controls
 from tabs import tabs
 import tab_widgets_callback
+import tab_price_week_callback
+import tab_data_table_callback
 
 app = dash.Dash(__name__,
         meta_tags=[{"name": "viewport", "content": "width=device-width"}]
@@ -53,6 +55,8 @@ app.layout = html.Div(layout_children,
 
 
 tab_widgets_callback.set_callbacks(app)
+tab_price_week_callback.set_callbacks(app)
+tab_data_table_callback.set_callbacks(app)
 
 
 if __name__ == "__main__":

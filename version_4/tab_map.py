@@ -32,7 +32,6 @@ fig.update_layout(
 )
 
 map_ = dcc.Graph(
-        id='basic-interactions',
         figure=fig,
         style={'height': 900}
         )

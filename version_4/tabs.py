@@ -2,6 +2,7 @@ import dash_core_components as dcc
 from tab_widgets import tab_widgets_children
 from tab_data_table import tab_table_children
 from tab_map import tab_map_children
+from tab_price_week import tab_price_week_children
 
 
 tabs = dcc.Tabs(
@@ -15,5 +16,6 @@ tabs = dcc.Tabs(
                 children=tab_table_children),
             dcc.Tab(label='Map', value='tab_map',
                 children=tab_map_children),
-            dcc.Tab(label='Price by Week', value='tab_price_week'),
+            dcc.Tab(label='Price by Week', value='tab_price_week',
+                children=tab_price_week_children),
         ])
