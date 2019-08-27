@@ -3,6 +3,7 @@ import dash_html_components as html
 import dash_core_components as dcc
 from controls import controls
 from tabs import tabs
+import tab_widgets_callback
 
 app = dash.Dash(__name__,
         meta_tags=[{"name": "viewport", "content": "width=device-width"}]
@@ -50,6 +51,8 @@ app.layout = html.Div(layout_children,
             "flex-direction":"column"}
         )
 
+
+tab_widgets_callback.set_callbacks(app)
 
 
 if __name__ == "__main__":

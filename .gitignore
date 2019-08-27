@@ -1,0 +1,6 @@
+__pycache__
+assets_cpy
+dash-oil-and-gas
+*.pickle
+*.csv
+.mapbox_token
